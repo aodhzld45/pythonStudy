@@ -47,6 +47,15 @@ def solution(babbling):
     return count
 
 
+# 문자열 나누기 split
+a = "Life,is,too,Short"
+b = a.split(',') # split 기본값은 공백
+print(b, type(b))
+
+for i in a.split(','):
+    print(i)
+
+
 
 
 

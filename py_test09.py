@@ -1,6 +1,13 @@
 import copy
 # a = [10,20,30,40]
-a = [10, 20, [31, 32, [331,332,333]], 40, 50 ]
+a = [10, 20, [31, 32, [331,332,333]], 40, 50]
+
+dic1 = {'key1': 0, 'key2': 1, 'key3': 2, 'lst1' :[1,2,3,4,5]}
+
+dc = copy.deepcopy(dic1)
+
+print('첫번째 딕셔너리', dic1, id(dic1), type(dic1))
+print('dc', dc, id(dc))
 
 a[0] = 100
 a[1] = ['p', 'y', 't', 'h', 'o', 'n']
@@ -10,11 +17,25 @@ c = a[:]
 d = copy.copy(a)
 e = copy.deepcopy(a)
 
-print(a, id(a))
-print(b, id(b))
-print(c, id(c))
-print(d, id(d))
-print(e, id(e))
+# print("a = ", a, id(a))
+# print("a[] 번지의 id값 = ", id(a[2]))
+# print('b[] 번지의 id값  = ', id(b[2]))
+# print('c[] 번지의 id값  = ', id(c[2]))
+# print('d[] 번지의 id값  = ', id(d[2]))
+
+# print('e[] 번지의 id값  = ', id(e[2])  ) # deepcopy
+
+print('a[][] 번지의 id값 = ', id(a[2][2]))
+print('d[][] 번지의 id값 = ', id(d[2][2]))
+print('e[][] 번지의 id값 = ', id(e[2][2]))
+
+
+# print('e[] 번지의 id값  = ', id(e[3])) # deepcopy
+
+print("b = ", b, id(b))
+print("c = ", c, id(c))
+print("d = ", d, id(d))
+print("e = ", e, id(e))
 
 #b = a
 #print(b, id(b))

@@ -72,8 +72,10 @@ else:
         state = 0
         
 print(result[state])
+###############################################################
 
 # 2-1 가위 바위 보 게임 - 강사님의 답안
+
 game = {0:'가위', 1:'바위', 2:'보'}
 human = int(input('가위(0), 바위(1), 보(2) 중 하나를 입력해주세요.'))
 com = random.randint(0,2)
@@ -100,6 +102,26 @@ elif result in [1, -2]:
     print("이겼습니다.")
 else:
     print('졌습니다.')
+    
+# 2-2 가위 바위 보 게임 - 강사님의 답안
+
+game = {0:'가위', 1:'바위', 2:'보'}
+human = int(input('가위(0), 바위(1), 보(2) 중 하나를 입력해주세요.'))
+com = random.randint(0,2)
+result = [
+    ['비김', '컴퓨터 승', '사람 승'],
+    ['사람 승','비김', '컴퓨터 승'],
+    ['컴승','사람 승', '비김']
+]
+
+print(f'사용자 ( {human} vs {com} ) 컴퓨터')
+print(result[human][com])
+
+# print('human : ', game.get(human))
+# print('com : ', game.get(com))
+
+
+
 
 
 
